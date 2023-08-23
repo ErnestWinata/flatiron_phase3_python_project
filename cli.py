@@ -22,3 +22,7 @@ def list_countries():
     countries = session.query(Country).all()
     for country in countries:
         click.echo(country.name)
+
+if __name__ == '__main__':
+    Base.metadata.create_all(engine)
+    cli()
