@@ -37,6 +37,10 @@ def add_landmark(country_name, landmark_name, city_name):
         click.echo(f"Country {country_name} not found.")
         return
 
+    new_landmark = Landmark(name=landmark_name, city=city_name, country=country)
+    session.add(new_landmark)
+    session.commit()
+    click.echo(f"Added {landmark_name} in {country_name}.")
 
 if __name__ == '__main__':
     Base.metadata.create_all(engine)
