@@ -1,3 +1,7 @@
+import click
+from models import Base, Country, Landmark
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 DATABASE_URL = 'sqlite:///world_landmarks.db'  # Change this if you want to use a different database
 
