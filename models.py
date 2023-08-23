@@ -18,3 +18,6 @@ class Landmark(Base):
     name = Column(String, nullable=False)
     city = Column(String)
     visited = Column(Boolean, default=False)
+   
+    country_id = Column(Integer, ForeignKey('countries.id'))
+    country = relationship('Country', backref='landmarks')
