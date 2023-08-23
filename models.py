@@ -8,4 +8,9 @@ class Country(Base):
   
 
 class Landmark(Base):
-   pass
+   __tablename__ = 'landmarks'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    city = Column(String)
+    visited = Column(Boolean, default=False)
