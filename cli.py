@@ -16,3 +16,9 @@ def add_country(country_name):
     session.add(new_country)
     session.commit()
     click.echo(f"Added {country_name} to the database.")
+
+@cli.command()
+def list_countries():
+    countries = session.query(Country).all()
+    for country in countries:
+        click.echo(country.name)
