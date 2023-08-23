@@ -9,10 +9,9 @@ class Country(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
-  
 
 class Landmark(Base):
-   __tablename__ = 'landmarks'
+    __tablename__ = 'landmarks'
 
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)

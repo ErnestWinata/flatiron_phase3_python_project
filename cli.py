@@ -27,6 +27,17 @@ def list_countries():
     for country in countries:
         click.echo(country.name)
 
+@cli.command()
+@click.argument('country_name')
+@click.argument('landmark_name')
+@click.argument('city_name')
+def add_landmark(country_name, landmark_name, city_name):
+    country = session.query(Country).filter_by(name=country_name).first()
+    if not country:
+        click.echo(f"Country {country_name} not found.")
+        return
+
+
 if __name__ == '__main__':
     Base.metadata.create_all(engine)
     cli()
