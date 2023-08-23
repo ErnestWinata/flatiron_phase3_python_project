@@ -1,4 +1,8 @@
+from sqlalchemy import create_engine, Column, Integer, String, Boolean, ForeignKey
+from sqlalchemy.orm import sessionmaker, relationship
+from sqlalchemy.ext.declarative import declarative_base
 
+Base = declarative_base()
 
 class Country(Base):
     __tablename__ = 'countries'
