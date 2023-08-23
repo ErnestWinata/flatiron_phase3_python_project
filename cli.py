@@ -8,3 +8,11 @@ session = Session()
 @click.group()
 def cli():
     pass
+
+@cli.command()
+@click.argument('country_name')
+def add_country(country_name):
+    new_country = Country(name=country_name)
+    session.add(new_country)
+    session.commit()
+    click.echo(f"Added {country_name} to the database.")
