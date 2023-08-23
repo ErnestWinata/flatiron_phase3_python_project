@@ -42,6 +42,18 @@ def add_landmark(country_name, landmark_name, city_name):
     session.commit()
     click.echo(f"Added {landmark_name} in {country_name}.")
 
+@cli.command()
+@click.argument('country_name')
+def list_landmarks(country_name):
+    country = session.query(Country).filter_by(name=country_name).first()
+    if not country:
+        click.echo(f"Country {country_name} not found.")
+        return
+
+    click.echo(f"Landmarks in {country_name}:")
+    for landmark in country.landmarks:
+        click.echo(f"- {landmark.name} in {landmark.city}")
+
 if __name__ == '__main__':
     Base.metadata.create_all(engine)
     cli()
