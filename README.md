@@ -13,11 +13,11 @@ Features of this application:
 Installation
 
 1. Clone this repo to your local machine
-   https://github.com/ErnestWinata/flatiron_phase3_python_project
+      https://github.com/ErnestWinata/flatiron_phase3_python_project
 2. Install the required dependencies using Pipenv
-   pipenv install
+      pipenv install
 3. Create the database tables
-   pipenv run python cli.py
+      pipenv run python cli.py
 4. Run the CLI Application
    - to add a country
      pipenv run python cli.py add-country "Country"
