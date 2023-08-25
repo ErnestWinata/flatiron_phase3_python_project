@@ -1,9 +1,9 @@
-World Landmark CLI Application
+**World Landmark CLI Application**
 Phase 3 Project for Flatiron School
 
 This CLI application allows users to manage world landmarks, including adding countries, landmarks, and marking landmarks as visited.
 
-Features of this application:
+**Features of this application:**
 - add a new country to the database
 - list all countries in the database
 - add a landmark to a specific country
@@ -11,7 +11,7 @@ Features of this application:
 - mark landmarks as visited
 
 
-Installation
+**Installation**
 
 1. Clone this repo to your local machine
 
@@ -58,11 +58,11 @@ Installation
       exit
 
 
-Contributing
+**Contributing**
 
 Contributions and collaborations are welcome! Please submit a pull request if you find any issues or want to enhance the application.
 
 
-License
+**License**
 
 This project is licensed under the MIT License - see the LICENSE file for details.
