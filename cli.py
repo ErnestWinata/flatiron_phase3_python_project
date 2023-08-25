@@ -3,7 +3,7 @@ from models import Base, Country, Landmark
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = 'sqlite:///world_landmarks.db'  # Change this if you want to use a different database
+DATABASE_URL = 'sqlite:///world_landmarks.db'
 
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
@@ -53,6 +53,24 @@ def list_landmarks(country_name):
     click.echo(f"Landmarks in {country_name}:")
     for landmark in country.landmarks:
         click.echo(f"- {landmark.name} in {landmark.city}")
+
+@cli.command()
+@click.argument('country_name')
+@click.argument('landmark_name')
+def mark_visited(country_name, landmark_name):
+    country = session.query(Country).filter_by(name=country_name).first()
+    if not country:
+        click.echo(f"Country {country_name} not found.")
+        return
+
+    landmark = session.query(Landmark).filter_by(name=landmark_name, country=country).first()
+    if not landmark:
+        click.echo(f"Landmark {landmark_name} not found in {country_name}.")
+        return
+
+    landmark.visited = True
+    session.commit()
+    click.echo(f"Marked {landmark_name} in {country_name} as visited.")
 
 if __name__ == '__main__':
     Base.metadata.create_all(engine)
