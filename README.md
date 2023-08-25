@@ -25,27 +25,34 @@ Installation
    pipenv run python cli.py
    
 4. Run the CLI Application
+   
    - to add a country
 
      pipenv run python cli.py add-country "Country"
+
 
    - to list countries
 
      pipenv run python cli.py list-countries
 
+
    - to add a landmark
 
      pipenv run python cli.py add-landmark "Country" "Landmark" "City"
+
 
    - to list a landmark in a particular country
 
      pipenv run python cli.py list-landmarks "Country"
 
+
    - to mark as having visited a landmark
 
      pipenv run python cli.py mark-visited "Country" "Landmark"
 
+
 8. To exit the virtual environment
+
 
       exit
 
