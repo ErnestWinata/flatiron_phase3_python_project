@@ -1,2 +1,24 @@
-# flatiron_phase3_python_project
-Phase 3 project for Flatiron School: CLI
+World Landmark CLI Application
+Phase 3 Project for Flatiron School
+
+This CLI application allows users to manage world landmarks, including adding countries, landmarks, and marking landmarks as visited.
+
+Features of this application:
+- add a new country to the database
+- list all countries in the database
+- add a landmark to a specific country
+- list landmarks for a specific country
+- mark landmarks as visited
+
+Installation
+1. Clone this repo to your local machine
+   https://github.com/ErnestWinata/flatiron_phase3_python_project
+2. Install the required dependencies using Pipenv
+   pipenv install
+3. Create the database tables
+   pipenv run python cli.py
+4. Run the CLI Application
+     - to add a country
+         pipenv run python cli.py add-country "Country"
+      - to list countries
+          pipenv run python cli.py list-countries
