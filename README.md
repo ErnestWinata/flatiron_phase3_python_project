@@ -10,6 +10,7 @@ Features of this application:
 - list landmarks for a specific country
 - mark landmarks as visited
 
+
 Installation
 
 1. Clone this repo to your local machine
@@ -56,8 +57,12 @@ Installation
 
       exit
 
+
 Contributing
+
 Contributions and collaborations are welcome! Please submit a pull request if you find any issues or want to enhance the application.
 
+
 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
