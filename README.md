@@ -11,6 +11,7 @@ Features of this application:
 - mark landmarks as visited
 
 Installation
+
 1. Clone this repo to your local machine
    https://github.com/ErnestWinata/flatiron_phase3_python_project
 2. Install the required dependencies using Pipenv
@@ -18,7 +19,26 @@ Installation
 3. Create the database tables
    pipenv run python cli.py
 4. Run the CLI Application
-     - to add a country
-         pipenv run python cli.py add-country "Country"
-      - to list countries
-          pipenv run python cli.py list-countries
+   - to add a country
+     pipenv run python cli.py add-country "Country"
+
+   - to list countries
+     pipenv run python cli.py list-countries
+
+   - to add a landmark
+     pipenv run python cli.py add-landmark "Country" "Landmark" "City"
+
+   - to list a landmark in a particular country
+     pipenv run python cli.py list-landmarks "Country"
+
+   - to mark as having visited a landmark
+     pipenv run python cli.py mark-visited "Country" "Landmark"
+
+5. To exit the virtual environment
+      exit
+
+Contributing
+Contributions and collaborations are welcome! Please submit a pull request if you find any issues or want to enhance the application.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
